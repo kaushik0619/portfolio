@@ -14,27 +14,12 @@ export default function Projects() {
   });
 
   const projects = [
-    {
-      title: 'Splittor',
-      description: 'A full-stack expense splitting application that simplifies group expense management with real-time calculations and user-friendly interface.',
-      icon: BarChart,
-      image: '/split.webp',
-      technologies: ['React.js', 'Node.js', 'MongoDB', 'Express.js', 'JWT'],
-      features: [
-        'Real-time expense tracking',
-        'Group management system',
-        'Automated expense splitting',
-        'Secure user authentication',
-      ],
-      github: 'https://github.com/kaushik0619/splittor',
-      live: 'https://example.com',
-      color: 'blue',
-    },
+    
     {
       title: 'Inventory Management System',
       description: 'A comprehensive inventory management solution with authentication, real-time updates, and intuitive dashboard for business operations.',
       icon: Shield,
-      image: 'https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/inventory.webp',
       technologies: ['React.js', 'Node.js', 'MySQL', 'Express.js', 'JWT'],
       features: [
         'Product inventory tracking',
@@ -42,15 +27,15 @@ export default function Projects() {
         'Real-time stock updates',
         'Comprehensive reporting',
       ],
-      github: 'https://github.com/kaushik0619/InventoryTracker',
-      live: 'https://example.com',
+      github: 'https://github.com/kaushik0619/inventory_tracker',
+      live: 'https://inventory-tracker-tau-liard.vercel.app/',
       color: 'purple',
     },
     {
       title: 'Portfolio Website',
       description: 'This futuristic portfolio showcasing modern web development with 3D animations, glassmorphism design, and smooth interactions.',
       icon: Zap,
-      image: 'https://images.pexels.com/photos/11035471/pexels-photo-11035471.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/portfolio.webp',
       technologies: ['Next.js', 'Three.js', 'Framer Motion', 'Tailwind CSS', 'TypeScript'],
       features: [
         '3D animations and interactions',
@@ -66,7 +51,7 @@ export default function Projects() {
       title: 'Defi bank',
       description: 'A full-stack expense splitting application that simplifies group expense management with real-time calculations and user-friendly interface.',
       icon: DollarSign,
-      image: 'https://images.pexels.com/photos/6953922/pexels-photo-6953922.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/defi.webp',
       technologies: ['React.js', 'Node.js', 'MongoDB', 'Express.js', 'JWT'],
       features: [
         'Real-time expense tracking',
@@ -82,7 +67,7 @@ export default function Projects() {
       title: 'Bias detecting chatbot',
       description: 'A chatbot that detects and mitigates bias in user interactions, promoting fair and unbiased communication.',
       icon: Shield,
-      image: 'https://images.pexels.com/photos/6953922/pexels-photo-6953922.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/aibot.webp',
       technologies: ['React.js', 'Node.js', 'MongoDB', 'Express.js', 'JWT'],
       features: [
         'Real-time bias detection',
@@ -93,6 +78,22 @@ export default function Projects() {
       ],
       github: 'https://github.com/kaushik0619/bias-free-chat',
       live: 'https://bias-free-chat.vercel.app/',
+      color: 'blue',
+    },
+    {
+      title: 'Splittor',
+      description: 'A full-stack expense splitting application that simplifies group expense management with real-time calculations and user-friendly interface.',
+      icon: BarChart,
+      image: '/split.webp',
+      technologies: ['React.js', 'Node.js', 'MongoDB', 'Express.js', 'JWT'],
+      features: [
+        'Real-time expense tracking',
+        'Group management system',
+        'Automated expense splitting',
+        'Secure user authentication',
+      ],
+      github: 'https://github.com/kaushik0619/splittor',
+      live: 'https://example.com',
       color: 'blue',
     },
   
