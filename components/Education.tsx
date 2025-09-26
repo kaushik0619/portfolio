@@ -110,7 +110,7 @@ export default function Education() {
           className="space-y-16"
         >
           {/* Section Header */}
-          <motion.div variants={timelineVariants} className="text-center space-y-4">
+          <motion.div variants={timelineVariants as any} className="text-center space-y-4">
             <h2 className="text-4xl md:text-6xl font-bold">
               <span className="gradient-text">Education Timeline</span>
             </h2>
@@ -137,7 +137,7 @@ export default function Education() {
                 return (
                   <motion.div
                     key={index}
-                    variants={timelineVariants}
+                    variants={timelineVariants as any}
                     className="relative flex items-start space-x-8"
                   >
                     {/* Timeline Node */}

@@ -109,7 +109,7 @@ export default function Certifications() {
           className="space-y-16"
         >
           {/* Section Header */}
-          <motion.div variants={certVariants} className="text-center space-y-4">
+          <motion.div variants={certVariants as any} className="text-center space-y-4">
             <h2 className="text-4xl md:text-6xl font-bold">
               <span className="gradient-text">Certifications</span>
             </h2>
@@ -125,7 +125,7 @@ export default function Certifications() {
               const colors = getColorClasses(cert.color);
 
               return (
-                <motion.div key={index} variants={certVariants}>
+                <motion.div key={index} variants={certVariants as any}>
                   <Card className={`glass border-white/20 h-full transition-all duration-500 group ${colors.glow}`}>
                     <CardHeader className="pb-4">
                       <div className="flex items-start justify-between mb-4">
@@ -187,7 +187,7 @@ export default function Certifications() {
 
           {/* Additional Achievement Badge */}
           <motion.div
-            variants={certVariants}
+            variants={certVariants as any}
             className="text-center"
           >
             <motion.div

@@ -121,7 +121,7 @@ export default function Contact() {
           className="space-y-16"
         >
           {/* Section Header */}
-          <motion.div variants={itemVariants} className="text-center space-y-4">
+          <motion.div variants={itemVariants as any} className="text-center space-y-4">
             <h2 className="text-4xl md:text-6xl font-bold">
               <span className="gradient-text">Get In Touch</span>
             </h2>
@@ -132,7 +132,7 @@ export default function Contact() {
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <motion.div variants={itemVariants}>
+            <motion.div variants={itemVariants as any}>
               <Card className="glass border-white/20 hover:glow-blue transition-all duration-500 group">
                 <CardHeader>
                   <CardTitle className="text-2xl group-hover:gradient-text transition-all duration-300">
@@ -238,7 +238,7 @@ export default function Contact() {
             </motion.div>
 
             {/* Contact Information */}
-            <motion.div variants={itemVariants} className="space-y-8">
+            <motion.div variants={itemVariants as any} className="space-y-8">
               <div className="space-y-6">
                 {contactMethods.map((method, index) => {
                   const Icon = method.icon;

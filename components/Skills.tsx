@@ -117,7 +117,7 @@ export default function Skills() {
           className="space-y-16"
         >
           {/* Section Header */}
-          <motion.div variants={cardVariants} className="text-center space-y-4">
+          <motion.div variants={cardVariants as any} className="text-center space-y-4">
             <h2 className="text-4xl md:text-6xl font-bold">
               <span className="gradient-text">Technical Skills</span>
             </h2>
@@ -131,7 +131,7 @@ export default function Skills() {
             {skillCategories.map((category, categoryIndex) => {
               const Icon = category.icon;
               return (
-                <motion.div key={categoryIndex} variants={cardVariants}>
+                <motion.div key={categoryIndex} variants={cardVariants as any}>
                   <Card className={`glass border-white/20 h-full transition-all duration-500 group ${category.glow}`}>
                     <CardHeader className="pb-4">
                       <CardTitle className="flex items-center space-x-3 text-xl">
