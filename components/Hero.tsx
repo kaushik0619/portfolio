@@ -71,7 +71,7 @@ export default function Hero() {
             >
               <Download className="mr-2 h-5 w-5 group-hover:animate-bounce" />
               Download Resume
-            <a href="https://drive.google.com/file/d/1DH-RS50mNy5Vhe_PXVl-D5PKIQrx_JuL/view?usp=drive_link" download className="absolute inset-0" aria-hidden="true"></a>
+            <a href="https://drive.google.com/file/d/1qcpKwl2OpoO4fHRpSEEldwXj1pyvmJh_/view?usp=sharing" download className="absolute inset-0" aria-hidden="true"></a>
             </Button>
 
             <div className="flex items-center space-x-4">
