@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Mail, Github, Linkedin, Send, MapPin, Phone } from 'lucide-react';
+import { toast } from 'sonner';
 
 export default function Contact() {
   const [ref, inView] = useInView({
@@ -22,6 +23,8 @@ export default function Contact() {
     message: '',
   });
 
+  const [isLoading, setIsLoading] = useState(false);
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
@@ -29,17 +32,40 @@ export default function Contact() {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log('Form submitted:', formData);
+    setIsLoading(true);
+
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        toast.success('Message sent successfully! I\'ll get back to you soon.');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        toast.error(data.error || 'Failed to send message. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      toast.error('An error occurred. Please try again later.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const contactMethods = [
     {
       icon: Mail,
       title: 'Email',
-      value: 'kaushik@example.com',
+      value: 'kaushikthakur390@gmail.com',
       href: 'mailto:kaushikthakur390@gmail.com',
       color: 'blue',
     },
@@ -226,10 +252,11 @@ export default function Contact() {
                       <Button
                         type="submit"
                         size="lg"
-                        className="w-full glass bg-blue-500/20 hover:bg-blue-500/30 text-white border-blue-500/50 hover:border-blue-400 glow-blue transition-all duration-300 group"
+                        disabled={isLoading}
+                        className="w-full glass bg-blue-500/20 hover:bg-blue-500/30 text-white border-blue-500/50 hover:border-blue-400 glow-blue transition-all duration-300 group disabled:opacity-50 disabled:cursor-not-allowed"
                       >
                         <Send className="mr-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
-                        Send Message
+                        {isLoading ? 'Sending...' : 'Send Message'}
                       </Button>
                     </motion.div>
                   </form>

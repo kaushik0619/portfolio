@@ -15,6 +15,29 @@ export default function Projects() {
 
   const projects = [
     
+      {
+      title: 'Accessories But Cheaper`',
+      description: 'An end to end ecommerce store on a production level made for a client that owns a store which sells accessories for electronics and vehicles at a very cheap price still a work in progress adding the real products from the client is about to be done.',
+      icon: Shield,
+      image: '/logo.png',
+      technologies: ['React.js', 'Node.js', 'MongoDB', 'Express.js', 'JWT'],
+      features: [
+        'Product inventory tracking',
+        'User role management',
+        'Real-time updates',
+        'admin dashboard',
+        'add products',
+        'delete products',
+        'update products',
+        'view orders',
+        'login/signup with JWT authentication',
+        'mailing system for order confirmation',
+        'whatsapp notification for order confirmation',
+      ],
+      github: 'https://github.com/kaushik0619/techamrt',
+      live: 'https://accessoriesbutcheaper.com/',
+      color: 'purple',
+    },
     {
       title: 'Inventory Management System',
       description: 'A comprehensive inventory management solution with authentication, real-time updates, and intuitive dashboard for business operations.',
